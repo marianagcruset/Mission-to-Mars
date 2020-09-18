@@ -3,12 +3,12 @@ from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
 import datetime as dt
-from selenium import webdriver
+#from selenium import webdriver
 
 def scrape_all():
     # Initiate headless driver for deployment
-    #browser = Browser("chrome", executable_path="chromedriver", headless=True)
-    browser = webdriver.Chrome('\Web_Scraping\Mission-to-Mars\chromedriver.exe') 
+    browser = Browser("chrome", executable_path=r'C:\Users\marianaga\Class\Web_Scraping\Mission-to-Mars\chromedriver.exe', headless=True)
+    #browser = webdriver.Chrome(executable_path=r'C:\Users\marianaga\Class\Web_Scraping\Mission-to-Mars\chromedriver.exe') 
 
     news_title, news_paragraph = mars_news(browser)
 
